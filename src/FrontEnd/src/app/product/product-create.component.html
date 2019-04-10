@@ -1,0 +1,16 @@
+<h2>Create product</h2>
+<form id="productCreateForm">
+  <div class="form-group">
+    <p>
+      Name: <input matInput placeholder="Name" type="text" class="form-control" type="text" [formControl]="name" name="name"
+        id="name" />
+    </p>
+    <p>
+      Price: <input matInput placeholder="Price" type="text" class="form-control" type="text" [formControl]="price"
+        name="price" id="price" />
+    </p>
+    <button (click)="create()" id="productCreate" color="primary" type="button" class="btn" [disabled]="!name.value">
+      Create
+    </button>
+  </div>
+</form>
